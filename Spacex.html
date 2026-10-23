@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>SpaceX</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+
+        /* HEADER */
+
+        header {
+            height: 85px;
+            display: flex;
+            align-items: center;
+            padding: 0 45px;
+            background-color: black;
+        }
+
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-style: italic;
+            margin-right: 55px;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        .menu {
+            margin-left: auto;
+            font-size: 25px;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            height: 650px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.6)
+                ),
+                url("https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: flex-end;
+        }
+
+
+        .hero-text {
+            padding: 60px;
+        }
+
+
+        .hero-text p {
+            font-size: 18px;
+            letter-spacing: 2px;
+        }
+
+
+        .hero-text h1 {
+            font-size: 50px;
+            margin: 10px 0;
+        }
+
+
+        .button {
+            padding: 13px 30px;
+            background-color: white;
+            color: black;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        .button:hover {
+            background-color: #cccccc;
+        }
+
+
+        /* UPCOMING LAUNCH */
+
+        .upcoming {
+            padding: 70px 50px;
+            background-color: #111;
+        }
+
+
+        .title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+
+        .launch {
+            display: flex;
+            background-color: #1b1b1b;
+            margin-bottom: 25px;
+            min-height: 250px;
+        }
+
+
+        .launch img {
+            width: 40%;
+            object-fit: cover;
+        }
+
+
+        .launch-info {
+            padding: 35px;
+        }
+
+
+        .launch-info h2 {
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+
+        .launch-info p {
+            color: #bbbbbb;
+            line-height: 1.6;
+        }
+
+
+        .date {
+            color: white !important;
+            font-weight: bold;
+        }
+
+
+        /* STARLINK */
+
+        .starlink {
+            height: 500px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.7)
+                ),
+                url("https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        .starlink h1 {
+            font-size: 45px;
+            letter-spacing: 4px;
+        }
+
+
+        .starlink p {
+            font-size: 18px;
+            color: #ddd;
+        }
+
+
+        /* VEHICLES */
+
+        .vehicles {
+            background-color: white;
+            color: black;
+            padding: 70px 50px;
+        }
+
+
+        .vehicles .title {
+            color: black;
+        }
+
+
+        .vehicle-row {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+
+        .vehicle {
+            width: 30%;
+            border: 1px solid #ddd;
+            background-color: #f5f5f5;
+        }
+
+
+        .vehicle img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+
+        .vehicle-info {
+            padding: 25px;
+        }
+
+
+        .vehicle-info h2 {
+            font-size: 25px;
+        }
+
+
+        .vehicle-info p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+
+        .black-button {
+            padding: 12px 25px;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+
+
+        /* HUMAN SPACEFLIGHT */
+
+        .human {
+            height: 550px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.7)
+                ),
+                url("https://images.unsplash.com/photo-1614728263952-84ea256f9679?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .human-content {
+            padding: 60px;
+            width: 600px;
+        }
+
+
+        .human-content h1 {
+            font-size: 45px;
+        }
+
+
+        .human-content p {
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+
+        /* RIDE SHARE */
+
+        .rideshare {
+            padding: 70px 50px;
+            background-color: #111;
+            text-align: center;
+        }
+
+
+        .rideshare h1 {
+            font-size: 40px;
+        }
+
+
+        .rideshare p {
+            color: #bbb;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+
+        .ride-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+
+        .ride-box {
+            width: 280px;
+            padding: 30px;
+            border: 1px solid #444;
+        }
+
+
+        .ride-box h2 {
+            font-size: 22px;
+        }
+
+
+        /* MISSION */
+
+        .mission {
+            height: 450px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.4),
+                    rgba(0, 0, 0, 0.7)
+                ),
+                url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        .mission h1 {
+            font-size: 45px;
+        }
+
+
+        .mission p {
+            font-size: 18px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: black;
+            padding: 50px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            font-style: italic;
+        }
+
+
+        .footer-links {
+            margin: 25px 0;
+        }
+
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 13px;
+        }
+
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+
+        .copyright {
+            color: #666;
+            font-size: 12px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            SPACEX
+        </div>
+
+
+        <nav>
+
+            <a href="#">FALCON 9</a>
+
+            <a href="#">FALCON HEAVY</a>
+
+            <a href="#">DRAGON</a>
+
+            <a href="#">STARSHIP</a>
+
+            <a href="#">STARLINK</a>
+
+            <a href="#">HUMAN SPACEFLIGHT</a>
+
+            <a href="#">RIDESHARE</a>
+
+        </nav>
+
+
+        <div class="menu">
+            ☰
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <p>UPCOMING MISSION</p>
+
+            <h1>
+                STARSHIP
+            </h1>
+
+            <p>
+                MAKING LIFE MULTIPLANETARY
+            </p>
+
+            <button class="button">
+                LEARN MORE
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- UPCOMING LAUNCHES -->
+
+    <section class="upcoming">
+
+        <h1 class="title">
+            UPCOMING LAUNCHES
+        </h1>
+
+
+        <div class="launch">
+
+
+            <img
+                src="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=800&q=80"
+                alt="Rocket"
+            >
+
+
+            <div class="launch-info">
+
+                <p class="date">
+                    UPCOMING LAUNCH
+                </p>
+
+                <h2>
+                    STARLINK MISSION
+                </h2>
+
+                <p>
+                    Falcon 9 will launch a new group
+                    of Starlink satellites into low-Earth orbit.
+                </p>
+
+                <p>
+                    LOCATION: FLORIDA, USA
+                </p>
+
+                <button class="button">
+                    MISSION DETAILS
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="launch">
+
+
+            <img
+                src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=800&q=80"
+                alt="Falcon 9"
+            >
+
+
+            <div class="launch-info">
+
+                <p class="date">
+                    UPCOMING LAUNCH
+                </p>
+
+                <h2>
+                    FALCON 9
+                </h2>
+
+                <p>
+                    A reusable Falcon 9 rocket
+                    prepared for another orbital mission.
+                </p>
+
+                <p>
+                    VEHICLE: FALCON 9
+                </p>
+
+                <button class="button">
+                    VIEW MISSION
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- STARLINK -->
+
+    <section class="starlink">
+
+        <div>
+
+            <h1>
+                STARLINK
+            </h1>
+
+            <p>
+                HIGH-SPEED INTERNET FROM SPACE
+            </p>
+
+            <br>
+
+            <button class="button">
+                DISCOVER STARLINK
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- VEHICLES -->
+
+    <section class="vehicles">
+
+
+        <h1 class="title">
+            SPACE VEHICLES
+        </h1>
+
+
+        <div class="vehicle-row">
+
+
+            <div class="vehicle">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=700&q=80"
+                    alt="Falcon 9"
+                >
+
+
+                <div class="vehicle-info">
+
+                    <h2>
+                        FALCON 9
+                    </h2>
+
+                    <p>
+                        A reusable two-stage rocket
+                        designed for reliable space missions.
+                    </p>
+
+                    <button class="black-button">
+                        EXPLORE
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="vehicle">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1517976547714-720226b864c1?auto=format&fit=crop&w=700&q=80"
+                    alt="Starship"
+                >
+
+
+                <div class="vehicle-info">
+
+                    <h2>
+                        STARSHIP
+                    </h2>
+
+                    <p>
+                        A fully reusable transportation
+                        system designed for deep space.
+                    </p>
+
+                    <button class="black-button">
+                        EXPLORE
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="vehicle">
+
+
+                <img
+                    src="https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?auto=format&fit=crop&w=700&q=80"
+                    alt="Dragon"
+                >
+
+
+                <div class="vehicle-info">
+
+                    <h2>
+                        DRAGON
+                    </h2>
+
+                    <p>
+                        A spacecraft designed to transport
+                        crew and cargo to orbit.
+                    </p>
+
+                    <button class="black-button">
+                        EXPLORE
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- HUMAN SPACEFLIGHT -->
+
+    <section class="human">
+
+
+        <div class="human-content">
+
+            <h1>
+                HUMAN SPACEFLIGHT
+            </h1>
+
+            <p>
+                SpaceX is working to make spaceflight
+                more accessible and enable humans to
+                explore beyond Earth.
+            </p>
+
+            <button class="button">
+                LEARN MORE
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- RIDESHARE -->
+
+    <section class="rideshare">
+
+
+        <h1>
+            RIDESHARE
+        </h1>
+
+
+        <p>
+            SpaceX provides reliable and affordable
+            launch opportunities for satellite operators
+            around the world.
+        </p>
+
+
+        <div class="ride-boxes">
+
+
+            <div class="ride-box">
+
+                <h2>
+                    SMALL SATELLITES
+                </h2>
+
+                <p>
+                    Launch your satellite
+                    to orbit.
+                </p>
+
+                <button class="button">
+                    LEARN MORE
+                </button>
+
+            </div>
+
+
+            <div class="ride-box">
+
+                <h2>
+                    COMMERCIAL
+                </h2>
+
+                <p>
+                    Flexible launch options
+                    for customers.
+                </p>
+
+                <button class="button">
+                    LEARN MORE
+                </button>
+
+            </div>
+
+
+            <div class="ride-box">
+
+                <h2>
+                    GOVERNMENT
+                </h2>
+
+                <p>
+                    Reliable missions for
+                    government customers.
+                </p>
+
+                <button class="button">
+                    LEARN MORE
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FINAL MISSION -->
+
+    <section class="mission">
+
+
+        <div>
+
+            <h1>
+                MAKING LIFE MULTIPLANETARY
+            </h1>
+
+            <p>
+                THE FUTURE OF SPACE EXPLORATION
+            </p>
+
+            <br>
+
+            <button class="button">
+                EXPLORE SPACEX
+            </button>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+
+        <div class="footer-logo">
+            SPACEX
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#">PRIVACY POLICY</a>
+
+            <a href="#">SUPPLIERS</a>
+
+            <a href="#">CAREERS</a>
+
+            <a href="#">CONTACT</a>
+
+            <a href="#">UPDATES</a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 Space Exploration Technologies Corp.
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
